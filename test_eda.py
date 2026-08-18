@@ -1,21 +1,22 @@
 """
 test_eda.py
 
-Tests for the functions in eda.py. Uses a small, hand-built DataFrame
-with known values so that the correct output of each function can be
-computed by hand and checked with assert statements. Also runs the
-summary functions on the real dataset as a sanity check (e.g. correct
-shape, no unexpected missing values).
+Tests for the functions in data_processing.py and analysis.py. Uses a
+small, hand-built DataFrame with known values so that the correct
+output of each function can be computed by hand and checked with
+assert statements. Also runs the summary functions on the real
+dataset as a sanity check (e.g. correct shape, no unexpected missing
+values).
 """
 
 import pandas as pd
-from eda import (
+from data_processing import (
     load_data,
     check_missing_data,
     seven_number_summary,
     categorical_summary,
-    run_ttest,
 )
+from analysis import run_ttest
 
 
 def get_small_test_data():
